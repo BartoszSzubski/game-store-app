@@ -4,6 +4,8 @@
   --text-primary: #eaeaea;
   --orange: #ff8a00;
   --text-secondary: #9c9b9b;
+  --surface-mid: rgb(44, 44, 44);
+  --surface-light: rgb(68, 68, 68);
 }
 
 * {
@@ -21,6 +23,9 @@ body {
   min-height: 100vh;
   min-width: 100vh;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 nav {
   background-color: var(--surface-dark);
@@ -79,11 +84,17 @@ nav .home_li {
 .logo_game {
   color: var(--orange);
 }
-.nav-right_basket:hover {
+
+.nav-right_basket {
+  padding: 1.5rem 1.5rem;
+}
+.nav-right_basket:hover,
+.nav-right_user:hover {
   color: var(--orange);
   cursor: pointer;
   transform: scale(1.1);
 }
+
 .nav-right_search {
   padding: 1.5rem 1.5rem;
   margin-right: 1rem;
@@ -95,9 +106,6 @@ nav .home_li {
   transform: scale(1.1);
 }
 
-.nav-right_basket {
-  padding: 1.5rem 1.5rem;
-}
 .search-btn {
   background: none;
   border: none;
@@ -154,10 +162,12 @@ nav .home_li {
   border: solid 2px var(--orange);
   font-size: 2rem;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-  background-color: black;
+  background-color: var(--surface-dark);
   color: var(--text-primary);
 }
-
+.search-bar i {
+  color: var(--text-primary);
+}
 .adgame-img {
   width: 100vw;
   height: 50vh;
@@ -172,7 +182,61 @@ nav .home_li {
   );
   object-position: 50% 25%;
 }
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+}
 
+.search-results {
+  position: absolute;
+  width: 60rem;
+  min-height: 10rem;
+  background: var(--surface-mid);
+  top: 10rem;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.search-results-box {
+  display: flex;
+
+  border-bottom: 1px solid var(--surface-light);
+}
+
+.search-results-box:hover,
+.search-results-bottom:hover {
+  cursor: pointer;
+  background: var(--surface-light);
+}
+.search-results-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  width: 15rem;
+  height: 10rem;
+  padding: 1rem;
+}
+
+.search-results-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+.search-results-bottom {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  padding: 1.5rem;
+  text-align: center;
+}
 .banner {
   position: relative;
 }
@@ -203,6 +267,10 @@ nav .home_li {
   clip-path: polygon(0 0, 75% 0, 80% 10%, 100% 100%, 0 100%);
   border-radius: 1rem;
   padding: 0.5rem 1rem;
+}
+
+main {
+  flex: 1;
 }
 
 h1 {

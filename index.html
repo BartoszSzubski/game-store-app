@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js" defer></script>
+    <script type="module" src="main.js" defer></script>
   </head>
   <body>
     <nav>
@@ -38,6 +38,9 @@
         <li class="nav-right_basket" a href="#">
           <i class="fa-solid fa-basket-shopping"></i>
         </li>
+        <li class="nav-right_user">
+          <i class="fa-regular fa-user"></i>
+        </li>
         <li class="nav-right_search" a href="#">
           <button class="search-btn">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -49,8 +52,30 @@
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
     </nav>
+    <div class="search-overlay"></div>
+    <div class="search-results">
+      <div class="search-results-box">
+        <div class="search-results-box_left">
+          <img class="search-results-img" src="images/ashenvalor.png" alt="" />
+        </div>
+        <div class="search-results-right">Ashen Valor</div>
+      </div>
+      <div class="search-results-box">
+        <div class="search-results-box_left">
+          <img class="search-results-img" src="images/shadows.png" alt="" />
+        </div>
+        <div class="search-results-right">Shadows of Revenir</div>
+      </div>
+      <div class="search-results-box">
+        <div class="search-results-box_left">
+          <img class="search-results-img" src="images/veridan.png" alt="" />
+        </div>
+        <div class="search-results-right">Depths of Veridian</div>
+      </div>
+      <div class="search-results-bottom">Zobacz 3 wyniki</div>
+    </div>
     <section class="banner">
-      <img class="adgame-img" src="baner.png" alt="ad game banner" />
+      <img class="adgame-img" src="images/baner.png" alt="ad game banner" />
       <div class="banner-caption">
         <p class="banner-caption_title-game">Ecohaven Resurgance</p>
         <div class="banner-caption_under-title-game">
@@ -62,72 +87,7 @@
     <main>
       <section class="store">
         <h1>Trendy <i class="fa-solid fa-angle-right"></i></h1>
-        <div class="games-grid">
-          <div class="games-grid_box">
-            <div class="box-image-section">
-              <img class="template-img" src="frontlines.png" alt="" />
-              <div class="image-section_discount">-27%</div>
-            </div>
-            <div class="under-box-section">
-              <p class="under-box-section_title">
-                Warzone Frontlines PC (Steam)
-              </p>
-              <p class="under-box-section_price">199 zl</p>
-            </div>
-          </div>
-          <div class="games-grid_box">
-            <div class="box-image-section">
-              <img class="template-img" src="ashenvalor.png" alt="" />
-              <div class="image-section_discount">-40%</div>
-            </div>
-            <div class="under-box-section">
-              <p class="under-box-section_title">Ashen Valor PC (Steam)</p>
-              <p class="under-box-section_price">224 zl</p>
-            </div>
-          </div>
-          <div class="games-grid_box">
-            <div class="box-image-section">
-              <img class="template-img" src="ultimate.png" alt="" />
-              <div class="image-section_discount">-67%</div>
-            </div>
-            <div class="under-box-section">
-              <p class="under-box-section_title">Ultimate Soccer PS5</p>
-              <p class="under-box-section_price">87 zl</p>
-            </div>
-          </div>
-          <div class="games-grid_box">
-            <div class="box-image-section">
-              <img class="template-img" src="shadows.png" alt="" />
-              <div class="image-section_discount">-90%</div>
-            </div>
-            <div class="under-box-section">
-              <p class="under-box-section_title">
-                Shadows of Revenir (Epic Store)
-              </p>
-              <p class="under-box-section_price">24zl</p>
-            </div>
-          </div>
-          <div class="games-grid_box">
-            <div class="box-image-section">
-              <img class="template-img" src="infected.png" alt="" />
-              <div class="image-section_discount">-35%</div>
-            </div>
-            <div class="under-box-section">
-              <p class="under-box-section_title">Infected - Requiem Xbox One</p>
-              <p class="under-box-section_price">179 zl</p>
-            </div>
-          </div>
-          <div class="games-grid_box">
-            <div class="box-image-section">
-              <img class="template-img" src="veridan.png" alt="" />
-              <div class="image-section_discount">-77%</div>
-            </div>
-            <div class="under-box-section">
-              <p class="under-box-section_title">Depths of Veridan (Uplay)</p>
-              <p class="under-box-section_price">49 zl</p>
-            </div>
-          </div>
-        </div>
+        <div class="games-grid" id="games-container"></div>
       </section>
     </main>
     <footer>
