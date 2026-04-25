@@ -178,7 +178,7 @@ nav .home_li {
     0 0,
     /* lewy górny */ 100% 0,
     /* prawy górny */ 100% 100%,
-    /* prawy dół (normalnie) */ 0 90% /* lewy dół PODNIESIONY */
+    /* prawy dół (normalnie) */ 0 90% /* lewy dół podniesiony */
   );
   object-position: 50% 25%;
 }

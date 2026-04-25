@@ -41,3 +41,5 @@ document.addEventListener("click", (e) => {
     searchBar.classList.remove("active");
   }
 });
+
+//searchbar filter
