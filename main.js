@@ -43,3 +43,59 @@ document.addEventListener("click", (e) => {
 });
 
 //searchbar filter
+
+const searchInput = document.querySelector(".search-bar_input");
+const searchResults = document.querySelector(".search-results");
+const overlay = document.querySelector(".search-overlay");
+
+searchInput.addEventListener("input", (e) => {
+  const value = e.target.value.toLowerCase().trim();
+
+  if (value === "") {
+    searchResults.innerHTML = "";
+    searchResults.classList.remove("active");
+    overlay.classList.remove("active");
+    return;
+  }
+
+  searchResults.classList.add("active");
+  overlay.classList.add("active");
+
+  const filtered = games
+    .filter((game) => {
+      const nameMatch = game.name.toLowerCase().includes(value);
+
+      const genreMatch = game.genres?.some((g) =>
+        g.toLowerCase().includes(value),
+      );
+      const tagMatch = game.tags?.some((t) => t.toLowerCase().includes(value));
+
+      return nameMatch || genreMatch || tagMatch;
+    })
+    .slice(0, 4);
+  renderSearchResults(filtered);
+});
+
+function renderSearchResults(list) {
+  searchResults.innerHTML = "";
+
+  list.forEach((game) => {
+    searchResults.innerHTML += `
+      <div class="search-results-box">
+        <div class="search-results-box_left">
+          <img class="search-results-img" src="${game.image}" />
+        </div>
+        <div class="search-results-right">
+          ${game.name}
+        </div>
+      </div>
+    `;
+  });
+} //dotad
+
+document.addEventListener("click", (e) => {
+  if (!searchResults.contains(e.target)) {
+    searchResults.classList.remove("active");
+    overlay.classList.remove("active");
+  }
+}); //zamykanie search-results
