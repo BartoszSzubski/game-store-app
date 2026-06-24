@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fictional Games</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body class="contact-page-body">
+    <nav>
+      <ul class="nav-left">
+        <li class="home_li">
+          <a href="index.html">
+            <i class="fa-solid fa-gamepad"></i>
+            <span class="logo_game">Fictional</span
+            ><span class="logo_rush">Games</span></a
+          >
+        </li>
+      </ul>
+      <ul class="nav-center">
+        <li><a href="#">Trendy</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="#">Wishlist</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-right_basket">
+          <a href="basket.html"> <i class="fa-solid fa-basket-shopping"></i></a>
+        </li>
+        <li class="nav-right_user">
+          <a href="login.html"> <i class="fa-regular fa-user"></i></a>
+        </li>
+        <li class="nav-right_search" a href="#">
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </li>
+      </ul>
+      <div class="search-bar">
+        <input class="search-bar_input" type="text" placeholder="Search..." />
+        <button class="clear-input-btn">
+          <i class="fa-solid fa-delete-left"></i>
+        </button>
+      </div>
+    </nav>
+    <div class="search-overlay"></div>
+    <div class="search-results"></div>
+    <section class="banner-support">
+      <img
+        class="support-img"
+        src="images/support-img.png"
+        alt="ad game banner"
+      />
+      <div class="contact-caption">
+        <p class="contact-caption_title">Skontaktuj się z nami</p>
+
+        <p class="contact-caption_description">
+          Masz pytania, sugestie lub potrzebujesz pomocy?<br />Napisz do nas -
+          odpowiemy tak szybko,<br />
+          jak to możliwe.
+        </p>
+      </div>
+    </section>
+    <main>
+      <div class="content-container contact-page">
+        <div class="contact-page-form">
+          <h2>Wyślij wiadomość</h2>
+          <form class="contact-form">
+            <div class="form-row">
+              <div class="input-group">
+                <i class="fa-regular fa-user"></i>
+                <input type="text" placeholder="Imię i nazwisko" />
+              </div>
+
+              <div class="input-group">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="Adres email" />
+              </div>
+            </div>
+            <div class="input-group">
+              <i class="fa-solid fa-tag"></i>
+              <input type="text" placeholder="Temat wiadomości" />
+            </div>
+            <div class="input-group">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <input type="text" placeholder="Numer zamówienia (opcjonalnie)" />
+            </div>
+            <div class="input-group">
+              <i class="fa-regular fa-pen-to-square"></i>
+              <textarea
+                rows="7"
+                placeholder="Napisz swoją wiadomość..."
+              ></textarea>
+            </div>
+            <button class="contact-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              Wyślij wiadomość
+            </button>
+            <div class="form-trust-message">
+              <i class="fa-solid fa-user-shield"></i>
+              Twoje dane są chronione i wykorzystywane wyłącznie do obsługi
+              zgłoszenia.
+            </div>
+          </form>
+        </div>
+        <div class="contact-page-info">
+          <h2>Dane kontaktowe</h2>
+          <div class="contact-card">
+            <i class="fa-regular fa-envelope"></i>
+            <div class="contact-card-content">
+              <h3>Email</h3>
+              <p class="contact-card-value">support@fictionalgames.com</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fa-solid fa-phone"></i>
+            <div class="contact-card-content">
+              <h3>Telefon</h3>
+              <p>+48 123 456 789</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fa-regular fa-clock"></i>
+            <div class="contact-card-content">
+              <h3>Godzin pracy</h3>
+              <p>24/7</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <i class="fa-solid fa-headset"></i>
+
+            <div class="contact-card-content">
+              <h3>Średni czas odpowiadania</h3>
+              <p>Do 24h</p>
+            </div>
+          </div>
+          <div class="contact-card contact-card--highlight">
+            <i class="fa-regular fa-clock"></i>
+            <div class="contact-card-content">
+              <h3>Potrzebujesz natychmiastowej pomocy?</h3>
+              <p>Skorzystaj z naszego asystenta na żywo.</p>
+              <button class="contact-card-content-btn">
+                Otwórz czat na żywo
+              </button>
+              <p class="contact-card-status">
+                <span class="status-dot"></span> Online
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat-bubble" title="Porozmawiaj z asystentem">
+        <i class="fa-solid fa-headset"></i>
+        <span class="chat-status-dot"></span>
+      </div>
+      <div class="chat-window">
+        <div class="chat-window-header">
+          <div class="chat-window-icon"><i class="fa-regular fa-user"></i></div>
+          <div class="chat-window-title">
+            Asystent Fictional Games
+            <p><span class="chat-header-status-dot"></span> Online</p>
+          </div>
+          <button class="chat-window-close">x</button>
+        </div>
+        <div class="chat-window-body" id="chatBody">
+          <div class="chat-row-assistant">
+            <i class="fa-solid fa-robot"></i>
+            <div class="chat-message chat-message--assistant">
+              Hej. W czym mogę pomóc?
+            </div>
+          </div>
+
+          <div class="chat-message chat-message--user">
+            Cześć mam problem z aktywacją klucza
+          </div>
+          <div class="chat-row-assistant">
+            <i class="fa-solid fa-robot"></i>
+            <div class="chat-message chat-message--assistant">
+              Podaj numer zamówienia, a sprawdzę to dla ciebie.
+            </div>
+          </div>
+        </div>
+        <div class="chat-window-input">
+          <input type="text" id="chatInput" placeholder="Napisz wiadomość..." />
+          <button class="chat-window-btn" id="chatSend">
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section class="footer-section">
+        <div class="footer-section-left">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div class="footer-section-right">
+          <div class="section-right_up">support@fictionalgames.com</div>
+          <div class="section-right_bottom">Odpowiadamy w ciągu 24h</div>
+        </div>
+      </section>
+      <section class="footer-section">
+        <div class="footer-section-left">
+          <i class="fa-regular fa-clock"></i>
+        </div>
+        <div class="footer-section-right">
+          <div class="section-right_up">Godziny pracy</div>
+          <div class="section-right_bottom">Poniedziałek - Niedziela 24/7</div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

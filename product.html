@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fictional Games</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body class="product-page">
+    <nav>
+      <ul class="nav-left">
+        <li class="home_li">
+          <a href="index.html">
+            <i class="fa-solid fa-gamepad"></i>
+            <span class="logo_game">Fictional</span
+            ><span class="logo_rush">Games</span></a
+          >
+        </li>
+      </ul>
+      <ul class="nav-center">
+        <li><a href="#">Trendy</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="#">Wishlist</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-right_basket">
+          <a href="basket.html"> <i class="fa-solid fa-basket-shopping"></i></a>
+        </li>
+        <li class="nav-right_user">
+          <a href="login.html"> <i class="fa-regular fa-user"></i></a>
+        </li>
+        <li class="nav-right_search" a href="#">
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </li>
+      </ul>
+      <div class="search-bar">
+        <input class="search-bar_input" type="text" placeholder="Search..." />
+        <button class="clear-input-btn">
+          <i class="fa-solid fa-delete-left"></i>
+        </button>
+      </div>
+    </nav>
+    <div class="search-overlay"></div>
+    <div class="search-results"></div>
+    <main>
+      <div class="content-container">
+        <section class="product">
+          <div class="product-image">
+            <img src="/images/neonrift.png" alt="" />
+          </div>
+          <div class="product-panel">
+            <h1 class="product-panel-title">Neon Rift - PC (Steam)</h1>
+            <div class="product-panel-subinfos">
+              <div class="subinfo-item-left">
+                <i class="fa-brands fa-steam"></i>
+                <span>Steam</span>
+              </div>
+              <div class="subinfo-item">
+                <i class="fa-solid fa-check"></i>
+                <span>W magazynie</span>
+              </div>
+              <div class="subinfo-item">
+                <i class="fa-solid fa-check"></i>
+                <span>Pobieranie cyfrowe</span>
+              </div>
+            </div>
+
+            <div class="product-panel-viewers">
+              <i class="fa-solid fa-fire"></i>
+              <span>52 użytkowników na tej stronie</span>
+            </div>
+            <div class="product-panel-platform-select">
+              <select name="selectplatform" class="plaftorm-select" id="">
+                <button><selectedcontent></selectedcontent></button>
+                <option><div class="platform-name">PC/MAC</div></option>
+                <option><div class="platform-name">XBOX</div></option>
+                <option><div class="platform-name">PS5</div></option>
+              </select>
+            </div>
+            <div class="product-panel-price">
+              <div class="product-panel-price-icon">
+                <i class="fa-brands fa-cash-app"></i>
+              </div>
+              <div class="product-panel-price-original">199zł</div>
+              <div class="product-panel-price-discount">-30%</div>
+              <div class="product-panel-price-final">167.32zł</div>
+            </div>
+            <div class="product-panel-buttons">
+              <button data-tooltip="Dodaj do listy życzeń" class="btn-wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+
+              <button class="btn-cart" title="Dodaj do koszyka Neon Rift">
+                <i class="fa-solid fa-cart-shopping"></i
+                ><span>Dodaj do koszyka</span>
+              </button>
+            </div>
+          </div>
+          <div class="product-description">
+            <h2 class="product-description-title">O produkcie</h2>
+            <p class="product-description-content">
+              A dark sci-fi RPG set in a neon megacity where every choice shapes
+              the world. Play as a cyber-enhanced mercenary in a world ruled by
+              corporations, factions, and AI. Customize your character with
+              cybernetic upgrades, unlock new abilities, and influence branching
+              storylines with multiple endings. Explore a vast open world filled
+              with secrets, dynamic encounters, and high-stakes missions where
+              technology and humanity collide.
+            </p>
+            <div class="product-tags">
+              Tagi: ["cyberpunk", "open-world", "sci-fi"]
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Dane gry</h3>
+            <div class="product-details">
+              <div class="info-row">
+                <span class="info-label">Platforma:</span>
+                <span class="info-value">PC / PS5</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">Wydawca:</span>
+                <span class="info-value">Fictional Interactive</span>
+              </div>
+
+              <div class="info-row">
+                <span class="info-label">Języki:</span>
+                <span class="info-value">PL, EN</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Gatunek:</span>
+                <span class="info-value">RPG</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Data premiery:</span>
+                <span class="info-value">14 kwietnia 2026</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">PEGI:</span>
+                <span class="info-value">16</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Rozmiar:</span>
+                <span class="info-value">~80 GB</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Aktywacja:</span>
+                <span class="info-value">Steam</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <section class="footer-section">
+        <div class="footer-section-left">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div class="footer-section-right">
+          <div class="section-right_up">Bezpieczne zakupy</div>
+          <div class="section-right_bottom">Wsparcie 24/7</div>
+        </div>
+      </section>
+      <section class="footer-section">
+        <div class="footer-section-left">
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <div class="footer-section-right">
+          <div class="section-right_up">Tysiące zadowolonych klientów</div>
+          <div class="section-right_bottom">
+            Dołącz do grona graczy, którzy nam zaufali
+          </div>
+        </div>
+      </section>
+      <section class="footer-section">
+        <div class="footer-section-left"><i class="fa-solid fa-bolt"></i></div>
+        <div class="footer-section-right">
+          <div class="section-right_up">Natychmiastowa dostawa</div>
+          <div class="section-right_bottom">
+            Otrzymujesz produkt natychmiast po płatności
+          </div>
+        </div>
+      </section>
+      <section class="footer-section">
+        <div class="footer-section-left"><i class="fa-solid fa-tag"></i></div>
+        <div class="footer-section-right">
+          <div class="section-right_up">Najlepsze ceny</div>
+          <div class="section-right_bottom">Gry taniej niż u konkurencji</div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

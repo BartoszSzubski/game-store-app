@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-left login-nav">
+        <li class="home_li">
+          <a href="index.html">
+            <i class="fa-solid fa-gamepad"></i>
+            <span class="logo_game">Fictional</span
+            ><span class="logo_rush">Games</span></a
+          >
+        </li>
+      </ul>
+      <ul class="nav-back-login">
+        <li>
+          <button class="back-btn">
+            <i class="fa-solid fa-angle-left"></i>Powrót
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="login-page">
+      <div class="login-container">
+        <h1 class="login-panel-title">Logowanie</h1>
+        <div class="login-links">
+          <button class="login-btn">
+            <i class="fa-brands fa-google"></i>
+          </button>
+          <button class="login-btn">
+            <i class="fa-brands fa-discord"></i>
+          </button>
+          <button class="login-btn">
+            <i class="fa-brands fa-facebook"></i>
+          </button>
+          <button class="login-btn"><i class="fa-brands fa-github"></i></button>
+        </div>
+        <div class="login-separator"><span>lub</span></div>
+        <form class="login-form">
+          <div class="form-group">
+            <input type="email" placeholder="Email" />
+          </div>
+
+          <div class="form-group password-box">
+            <input type="password" placeholder="********" />
+            <i class="fa-solid fa-eye eye-open"></i>
+            <i class="fa-solid fa-eye-slash eye-close"></i>
+          </div>
+          <button type="submit" class="login-submit">Zaloguj sie</button>
+        </form>
+        <div class="auth-links">
+          <a href="#">Nie masz konta? </a>
+          <a href="#">Zapomniałeś hasła?</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

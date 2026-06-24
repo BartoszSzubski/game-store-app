@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fictional Games</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-left">
+        <li class="home_li">
+          <a href="index.html">
+            <i class="fa-solid fa-gamepad"></i>
+            <span class="logo_game">Fictional</span
+            ><span class="logo_rush">Games</span></a
+          >
+        </li>
+      </ul>
+      <ul class="nav-center">
+        <li><a href="#">Trendy</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Wishlist</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li class="nav-right_basket">
+          <a href="basket.html"> <i class="fa-solid fa-basket-shopping"></i></a>
+        </li>
+        <li class="nav-right_user">
+          <a href="login.html"> <i class="fa-regular fa-user"></i></a>
+        </li>
+        <li class="nav-right_search" a href="#">
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </li>
+      </ul>
+      <div class="search-bar">
+        <input class="search-bar_input" type="text" placeholder="Search..." />
+        <button class="clear-input-btn">
+          <i class="fa-solid fa-delete-left"></i>
+        </button>
+      </div>
+    </nav>
+    <div class="search-overlay"></div>
+    <div class="search-results"></div>
+    <section class="banner-support">
+      <img
+        class="support-img"
+        src="images/support-img.png"
+        alt="ad game banner"
+      />
+      <div class="support-caption">
+        <p class="support-caption_title">Support Center</p>
+
+        <p class="support-caption_description">
+          Znajdź odpowiedzi na najczęstsze pytania <br />lub porozmawiaj z
+          naszym asystentem.
+        </p>
+      </div>
+    </section>
+    <main>
+      <div class="content-container">
+        <section class="faq-section">
+          <h2 class="faq-title">FAQs</h2>
+          <div class="faq">
+            <div class="faq-question">
+              Jak aktywować klucz?
+              <button><i class="fa-solid fa-angle-down faq-arrow"></i></button>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Aby aktywować klucz, uruchom wybraną platformę (np. Steam, EA
+                App lub Ubisoft Connect), przejdź do opcji aktywacji produktu i
+                wprowadź otrzymany kod. Po zatwierdzeniu gra zostanie przypisana
+                do Twojego konta.
+              </p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="faq-question">
+              Klucz nie działa
+              <button><i class="fa-solid fa-angle-down faq-arrow"></i></button>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Jeśli klucz nie działa, upewnij się, że został wpisany poprawnie
+                oraz że aktywujesz go na właściwej platformie i w odpowiednim
+                regionie. W razie dalszych problemów skontaktuj się z naszym
+                wsparciem, a sprawdzimy i pomożemy rozwiązać sytuację.
+              </p>
+            </div>
+          </div>
+          <div class="faq">
+            <div class="faq-question">
+              Czy mogę dokonać zwrotu?
+              <button><i class="fa-solid fa-angle-down faq-arrow"></i></button>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Zwrot jest możliwy w ciągu 7 dni od zakupu, pod warunkiem że
+                klucz nie został jeszcze użyty. W przypadku wykorzystania kodu
+                zwrot nie jest możliwy. W razie pytań skontaktuj się z naszym
+                wsparciem.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="chat-bubble" title="Porozmawiaj z asystentem">
+        <i class="fa-solid fa-headset"></i>
+        <span class="chat-status-dot"></span>
+      </div>
+      <div class="chat-window">
+        <div class="chat-window-header">
+          <div class="chat-window-icon"><i class="fa-regular fa-user"></i></div>
+          <div class="chat-window-title">
+            Asystent Fictional Games
+            <p><span class="chat-header-status-dot"></span> Online</p>
+          </div>
+          <button class="chat-window-close">x</button>
+        </div>
+        <div class="chat-window-body" id="chatBody">
+          <!--  <div class="chat-row-assistant">
+            <i class="fa-solid fa-robot"></i>
+            <div class="chat-message chat-message--assistant">
+              Hej. W czym mogę pomóc?
+            </div>
+          </div>
+
+          <div class="chat-message chat-message--user">
+            Cześć mam problem z aktywacją klucza
+          </div>
+          <div class="chat-row-assistant">
+            <i class="fa-solid fa-robot"></i>
+            <div class="chat-message chat-message--assistant">
+              Podaj numer zamówienia, a sprawdzę to dla ciebie.
+            </div>
+           </div>-->
+        </div>
+        <div class="chat-window-input">
+          <input type="text" id="chatInput" placeholder="Napisz wiadomość..." />
+          <button class="chat-window-btn" id="chatSend">
+            <i class="fa-solid fa-caret-right"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section class="footer-section">
+        <div class="footer-section-left">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        <div class="footer-section-right">
+          <div class="section-right_up">support@fictionalgames.com</div>
+          <div class="section-right_bottom">Odpowiadamy w ciągu 24h</div>
+        </div>
+      </section>
+      <section class="footer-section">
+        <div class="footer-section-left">
+          <i class="fa-regular fa-clock"></i>
+        </div>
+        <div class="footer-section-right">
+          <div class="section-right_up">Godziny pracy</div>
+          <div class="section-right_bottom">Poniedziałek - Niedziela 24/7</div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

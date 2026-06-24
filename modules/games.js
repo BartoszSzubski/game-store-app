@@ -136,6 +136,7 @@ export const games = [
     price: 219.99,
     discount: true,
     discountPercent: 35,
+    trending: true,
   },
   {
     id: 12,
@@ -148,6 +149,7 @@ export const games = [
     price: 189.99,
     discount: true,
     discountPercent: 50,
+    trending: true,
   },
   {
     id: 13,
@@ -184,6 +186,7 @@ export const games = [
     price: 89.99,
     discount: true,
     discountPercent: 60,
+    trending: true,
   },
   {
     id: 16,
@@ -208,6 +211,7 @@ export const games = [
     price: 119.99,
     discount: true,
     discountPercent: 45,
+    trending: true,
   },
   {
     id: 18,
@@ -242,6 +246,7 @@ export const games = [
     price: 299.99,
     discount: true,
     discountPercent: 22,
+    trending: true,
   },
   {
     id: 21,
@@ -264,6 +269,7 @@ export const games = [
     price: 329.99,
     discount: true,
     discountPercent: 28,
+    trending: true,
   },
   {
     id: 23,

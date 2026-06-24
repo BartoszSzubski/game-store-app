@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fictional Games</title>
+    <title>Koszyk</title>
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -31,49 +31,41 @@
           >
         </li>
       </ul>
-      <ul class="nav-center">
-        <li><a href="#">Trendy</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="#">Wishlist</a></li>
-      </ul>
-      <ul class="nav-right">
-        <li class="nav-right_basket">
-          <a href="basket.html"> <i class="fa-solid fa-basket-shopping"></i></a>
-        </li>
-        <li class="nav-right_user">
-          <a href="login.html"> <i class="fa-regular fa-user"></i></a>
-        </li>
-        <li class="nav-right_search" a href="#">
-          <button class="search-btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
+       <ul class="nav-back">
+        <li>
+          <button class="back-btn">
+            <i class="fa-solid fa-angle-left"></i>Powrót
           </button>
         </li>
       </ul>
-      <div class="search-bar">
-        <input class="search-bar_input" type="text" placeholder="Search..." />
-        <button class="clear-input-btn">
-          <i class="fa-solid fa-delete-left"></i>
-        </button>
-      </div>
     </nav>
     <div class="search-overlay"></div>
     <div class="search-results"></div>
-    <section class="banner">
-      <img class="adgame-img" src="images/baner.png" alt="ad game banner" />
-      <div class="banner-caption">
-        <p class="banner-caption_title-game">Ecohaven Resurgance</p>
-        <div class="banner-caption_under-title-game">
-          <p class="banner-caption_under-title-game_discount">-30%</p>
-          <p class="banner-caption_under-title-game_price">224 zl</p>
-        </div>
-      </div>
-    </section>
     <main>
-      <div class="content-container">
-        <section class="store">
-          <h1>Hot Deals<i class="fa-solid fa-angle-right"></i></h1>
-          <div class="games-grid" id="games-container"></div>
-        </section>
+      <div class="content-container basket-page-container">
+        <div class="basket-page-section">
+          <h1>Koszyk</h1>
+          <div class="basket-box-empty">
+            <div class="basket-icon">
+              <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+            <div class="basket-empty-title">Koszyk jest pusty</div>
+            <div class="basket-empty-info">
+              Nie masz jeszcze żadnych produktów w koszyku. Sprawdź dostępne gry
+              i dodaj coś dla siebie!
+            </div>
+            <button class="empty-basket-btn">Przejdź do sklepu</button>
+          </div>
+        </div>
+        <div class="basket-main-right">
+          <h2>Razem</h2>
+          <div class="basket-main-right-container">
+          <div class="main-right_box"><div class="basket-summary">Suma<span>0 zł</span></div>
+          <button class="btn-gotopayment">Dalej<i class="fa-solid fa-angle-right"></i></button>
+           <div class="basket-separator"><span>lub</span></div>    
+           <div class="back-to-shop"><i class="fa-solid fa-angle-left"></i>Wróć do sklepu</div>   
+           </div>
+          </div>
       </div>
     </main>
     <footer>
