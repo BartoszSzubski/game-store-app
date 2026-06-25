@@ -1272,6 +1272,11 @@ h3 {
   align-items: center;
   padding: 0 1rem;
 }
+
+.chat-message--assistant a:visited {
+  color: #4da3ff;
+}
+
 /*contact page*/
 
 .contact-caption {

@@ -12,7 +12,7 @@ export function initChatbot() {
   const chatInput = document.getElementById("chatInput");
   const chatSend = document.getElementById("chatSend");
 
-  //chatbot responses
+  //chatbot welcome messages
   const welcomeMessages = [
     "Witaj! Jestem asystentem Fictional Games. W czym mogę pomóc?",
     "Cześć! Jak mogę Ci dziś pomóc?",
@@ -20,9 +20,17 @@ export function initChatbot() {
     "Witaj w centrum pomocy Fictional Games!",
   ];
 
-  const botRules = [
+  const chatbotRules = [
     {
-      keywords: ["klucz", "key", "aktywacja"],
+      keywords: ["cześć", "hej", "siema"],
+      responses: [
+        "Cześć! W czym mogę pomóc?",
+        "Witaj, jak mogę ci pomóc? Opisz swój problem.",
+        "Hej, co potrzebujesz?",
+      ],
+    },
+    {
+      keywords: ["klucz", "key", "aktywacja", "zamówienie"],
       responses: [
         "Podaj numer zamówienia.",
         "Sprawdź czy klucz jest poprawny.",
@@ -31,13 +39,24 @@ export function initChatbot() {
     },
     {
       keywords: ["zwrot", "refund"],
-      responses: ["Zwrot możliwy w 7 dni jeśli klucz nieużyty."],
+      responses: [
+        "Jasne! Możesz zrobić zwrot w ciągu 7 dni, o ile klucz nie został użyty.",
+        'Zwrotu możesz dokonać w naszym formularzu kontaktowym: <a href="contact.html">kliknij tutaj</a>',
+      ],
     },
     {
       keywords: ["błąd", "error", "nie działa"],
       responses: [
         "Sprawdź region aktywacji.",
         "Podaj dokładny komunikat błędu.",
+        "Chętnie pomożemy, napisz co dokładnie się stało.",
+      ],
+    },
+    {
+      keywords: ["kontakt", "support", "pomoc", "email"],
+      responses: [
+        'Skontaktuj się z nami: <a href="contact.html">kliknij tutaj</a>',
+        'Przejdź do formularza kontaktowego: <a href="contact.html">kliknij tutaj</a>',
       ],
     },
   ];
@@ -56,11 +75,78 @@ export function initChatbot() {
     const message = document.createElement("div");
 
     message.classList.add("chat-message", "chat-message--assistant");
-    message.textContent = text;
+    message.innerHTML = text;
     row.appendChild(icon);
     row.appendChild(message);
     chatBody.appendChild(row);
+    scrollToBottom();
   }
+
+  function addUserMessage(text) {
+    const message = document.createElement("div");
+    message.classList.add("chat-message", "chat-message--user");
+    message.textContent = text;
+    chatBody.appendChild(message);
+    scrollToBottom();
+  }
+  function handleSendMessage() {
+    const text = chatInput.value.trim();
+    if (!text) return;
+    addUserMessage(text);
+    chatInput.value = "";
+
+    const typing = showTyping();
+    handleDelayedReply(text, typing);
+  }
+
+  function showTyping() {
+    const typing = document.createElement("div");
+    typing.classList.add("chat-row-assistant");
+    const icon = document.createElement("i");
+    icon.classList.add("fa-solid", "fa-robot");
+    const message = document.createElement("div");
+    message.classList.add("chat-message", "chat-message--assistant");
+    message.textContent = "Pisze...";
+    typing.appendChild(icon);
+    typing.appendChild(message);
+    chatBody.appendChild(typing);
+    chatBody.scrollTo({ top: chatBody.scrollHeight });
+    return typing;
+  }
+
+  function handleDelayedReply(text, typing) {
+    const delay = 600 + Math.random() * 1200;
+    setTimeout(() => {
+      typing.remove();
+      const botResponse = getBotResponse(text);
+      addBotMessage(botResponse);
+    }, delay);
+  }
+
+  function scrollToBottom() {
+    chatBody.scrollTo({
+      top: chatBody.scrollHeight,
+      behavior: "smooth",
+    });
+  }
+
+  function getBotResponse(userText) {
+    const text = userText.toLowerCase();
+    for (let i = 0; i < chatbotRules.length; i++) {
+      const chatResponse = chatbotRules[i];
+      for (let j = 0; j < chatResponse.keywords.length; j++) {
+        const keyword = chatResponse.keywords[j];
+        if (text.includes(keyword)) {
+          const randomIndex = Math.floor(
+            Math.random() * chatResponse.responses.length,
+          );
+          return chatResponse.responses[randomIndex];
+        }
+      }
+    }
+    return "Nie rozumiem, możesz powtórzyć?";
+  }
+
   //event listeners
   chatBubble.addEventListener("click", () => {
     chatWindow.classList.add("active");
@@ -75,6 +161,14 @@ export function initChatbot() {
   contactCardContentBtn?.addEventListener("click", () => {
     chatWindow.classList.add("active");
     chatBubble.classList.add("hidden");
+  });
+
+  chatSend.addEventListener("click", handleSendMessage);
+
+  chatInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      handleSendMessage();
+    }
   });
 
   addBotMessage(getRandomWelcomeMessage());
