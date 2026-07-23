@@ -65,7 +65,7 @@ export function initSearch() {
 
     list.forEach((game) => {
       searchResults.innerHTML += `
-      <div class="search-results-box data-id="${game.id}">
+      <div class="search-results-box" data-id="${game.id}">
         <div class="search-results-box_left">
           <img class="search-results-img" src="${game.image}" />
         </div>

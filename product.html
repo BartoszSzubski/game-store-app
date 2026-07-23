@@ -32,9 +32,13 @@
         </li>
       </ul>
       <ul class="nav-center">
-        <li><a href="#">Trendy</a></li>
+        <li><a href="trendy.html">Trendy</a></li>
         <li><a href="support.html">Support</a></li>
-        <li><a href="#">Wishlist</a></li>
+        <li>
+          <a href="wishlist.html"
+            >Wishlist <span class="wishlist-count">0</span></a
+          >
+        </li>
       </ul>
       <ul class="nav-right">
         <li class="nav-right_basket">
@@ -62,10 +66,10 @@
       <div class="content-container">
         <section class="product">
           <div class="product-image">
-            <img src="images/neonrift.png" alt="" />
+            <img src="" alt="" />
           </div>
           <div class="product-panel">
-            <h1 class="product-panel-title">Neon Rift - PC (Steam)</h1>
+            <h1 class="product-panel-title"></h1>
             <div class="product-panel-subinfos">
               <div class="subinfo-item-left">
                 <i class="fa-brands fa-steam"></i>
@@ -83,10 +87,12 @@
 
             <div class="product-panel-viewers">
               <i class="fa-solid fa-fire"></i>
-              <span>52 użytkowników na tej stronie</span>
+              <span class="product-viewers-count"
+                >52 użytkowników na tej stronie</span
+              >
             </div>
             <div class="product-panel-platform-select">
-              <select name="selectplatform" class="plaftorm-select" id="">
+              <select name="selectplatform" class="platform-select" id="">
                 <button><selectedcontent></selectedcontent></button>
                 <option><div class="platform-name">PC/MAC</div></option>
                 <option><div class="platform-name">XBOX</div></option>
@@ -106,7 +112,7 @@
                 <i class="fa-regular fa-heart"></i>
               </button>
 
-              <button class="btn-cart" title="Dodaj do koszyka Neon Rift">
+              <button class="btn-cart">
                 <i class="fa-solid fa-cart-shopping"></i
                 ><span>Dodaj do koszyka</span>
               </button>
@@ -132,37 +138,41 @@
             <div class="product-details">
               <div class="info-row">
                 <span class="info-label">Platforma:</span>
-                <span class="info-value">PC / PS5</span>
+                <span class="info-value product-platform"></span>
               </div>
 
               <div class="info-row">
                 <span class="info-label">Wydawca:</span>
-                <span class="info-value">Fictional Interactive</span>
+                <span class="info-value product-publisher"
+                  >Fictional Interactive</span
+                >
               </div>
 
               <div class="info-row">
                 <span class="info-label">Języki:</span>
-                <span class="info-value">PL, EN</span>
+                <span class="info-value product-languages">PL, EN</span>
               </div>
               <div class="info-row">
                 <span class="info-label">Gatunek:</span>
-                <span class="info-value">RPG</span>
+                <span class="info-value product-genres">RPG</span>
               </div>
               <div class="info-row">
                 <span class="info-label">Data premiery:</span>
-                <span class="info-value">14 kwietnia 2026</span>
+                <span class="info-value product-release-date"
+                  >14 kwietnia 2026</span
+                >
               </div>
               <div class="info-row">
                 <span class="info-label">PEGI:</span>
-                <span class="info-value">16</span>
+                <span class="info-value product-pegi">16</span>
               </div>
               <div class="info-row">
                 <span class="info-label">Rozmiar:</span>
-                <span class="info-value">~80 GB</span>
+                <span class="info-value product-size">~80 GB</span>
               </div>
               <div class="info-row">
                 <span class="info-label">Aktywacja:</span>
-                <span class="info-value">Steam</span>
+                <span class="info-value product-activation">Steam</span>
               </div>
             </div>
           </div>

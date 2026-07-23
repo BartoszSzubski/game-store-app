@@ -14,6 +14,7 @@ export function initNavigation() {
     if (gameFromSearch) {
       const id = gameFromSearch.dataset.id;
       window.location.href = `product.html?id=${id}`;
+      return;
     }
     if (back) {
       if (document.referrer) {

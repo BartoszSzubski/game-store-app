@@ -56,6 +56,7 @@ nav .home_li {
 .home_li a {
   text-decoration: none;
   color: inherit;
+  white-space: nowrap;
 }
 
 .nav-center li a {
@@ -448,6 +449,10 @@ footer {
   .games-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .home_li {
+    font-size: 3rem;
+    display: flex;
+  }
 }
 
 /* tel */
@@ -520,9 +525,7 @@ footer {
 /* product page */
 
 .product-page {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15)),
-    url("images/neonrift_bg.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15));
 
   background-size: cover;
   background-position: center;
@@ -548,6 +551,7 @@ footer {
   height: 100%;
   object-fit: cover;
   display: block;
+  aspect-ratio: 16/9;
 }
 
 .product-panel,
@@ -690,6 +694,7 @@ option:hover {
 }
 .product-tags {
   color: var(--orange);
+  margin-top: 3rem;
 }
 .info-label {
   color: var(--text-secondary);
@@ -710,7 +715,30 @@ h3 {
 .info-row {
   padding: 0.3rem;
 }
+/* product page media - tel*/
 
+@media (max-width: 1200px) {
+  .product {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  footer {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    width: calc(50% - 2rem);
+    margin: 0;
+  }
+}
 /*tooltip*/
 
 .tooltip {
@@ -1428,4 +1456,45 @@ h3 {
   border: none;
   cursor: pointer;
   margin: 0.5rem 0;
+}
+
+/*wishlist page*/
+
+.wishlist-games {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 2rem;
+  color: var(--text-primary);
+}
+.wishlist-game h2 {
+  font-size: 2.2rem;
+}
+.wishlist-game p {
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+}
+
+.wishlist-game {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  background-color: #1c1c1c;
+  border-radius: 1rem;
+}
+.wishlist-game img {
+  width: 280px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.wishlist-game-info {
+  flex: 1;
+}
+
+.remove-from-wishlist {
+  font-size: 3rem;
+  cursor: pointer;
 }

@@ -78,7 +78,7 @@ export function initChatbot() {
     message.innerHTML = text;
     row.appendChild(icon);
     row.appendChild(message);
-    chatBody.appendChild(row);
+    chatBody?.appendChild(row);
     scrollToBottom();
   }
 
@@ -124,7 +124,7 @@ export function initChatbot() {
   }
 
   function scrollToBottom() {
-    chatBody.scrollTo({
+    chatBody?.scrollTo({
       top: chatBody.scrollHeight,
       behavior: "smooth",
     });
@@ -148,12 +148,12 @@ export function initChatbot() {
   }
 
   //event listeners
-  chatBubble.addEventListener("click", () => {
+  chatBubble?.addEventListener("click", () => {
     chatWindow.classList.add("active");
     chatBubble.classList.add("hidden");
   });
 
-  closeBtn.addEventListener("click", () => {
+  closeBtn?.addEventListener("click", () => {
     chatWindow.classList.remove("active");
     chatBubble.classList.remove("hidden");
   });
@@ -163,9 +163,9 @@ export function initChatbot() {
     chatBubble.classList.add("hidden");
   });
 
-  chatSend.addEventListener("click", handleSendMessage);
+  chatSend?.addEventListener("click", handleSendMessage);
 
-  chatInput.addEventListener("keydown", (e) => {
+  chatInput?.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       handleSendMessage();
     }
