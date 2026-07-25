@@ -88,8 +88,15 @@ nav .home_li {
   display: flex;
   justify-content: flex-end;
 }
-.logo_game {
+.logo_game,
+.logo-short-f {
   color: var(--orange);
+}
+.logo-short-g {
+  color: var(--text-primary);
+}
+.logo-short {
+  display: none;
 }
 
 .nav-right_basket {
@@ -307,34 +314,6 @@ nav .home_li {
   position: relative;
 }
 
-.banner-caption {
-  position: absolute;
-  color: var(--text-primary);
-  top: 15rem;
-  left: 10rem;
-}
-
-.banner-caption_title-game {
-  font-size: 3rem;
-  font-weight: 600;
-}
-
-.banner-caption_under-title-game {
-  display: flex;
-  align-items: center;
-  font-size: 3rem;
-  margin: 2rem 0m;
-}
-
-.banner-caption_under-title-game_discount {
-  background-color: var(--orange);
-  margin: 0 3rem;
-  font-size: 2rem;
-  clip-path: polygon(0 0, 75% 0, 80% 10%, 100% 100%, 0 100%);
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-}
-
 main {
   flex: 1;
 }
@@ -359,6 +338,9 @@ h1:hover {
 h1:hover i {
   cursor: pointer;
   color: var(--text-primary);
+}
+.store h1 {
+  white-space: nowrap;
 }
 
 .template-img {
@@ -465,6 +447,17 @@ footer {
     display: flex;
   }
 }
+/*logo*/
+@media (max-width: 1400px) {
+  .logo_game,
+  .logo_rush {
+    display: none;
+  }
+  .logo-short {
+    display: inline;
+    font-weight: 600;
+  }
+}
 
 /* tel */
 @media (max-width: 650px) {
@@ -533,6 +526,9 @@ footer {
     padding: 0.3rem 0.8rem;
   }
 }
+
+/* banner test */
+
 /* product page */
 
 .product-page {
@@ -1531,6 +1527,7 @@ h3 {
   background: none;
   cursor: pointer;
   flex-shrink: 0;
+  transform: translateY(1rem);
 }
 
 .hamburger__line {
@@ -1581,7 +1578,7 @@ h3 {
   transform: translateX(-50%);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
   .burger-btn {
     display: block;
     top: 1rem;
