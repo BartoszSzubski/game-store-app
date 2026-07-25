@@ -6,6 +6,8 @@ import { initChatbot } from "./modules/chatbot.js";
 import { handleProductPage } from "./modules/productpage.js";
 import { renderWishlist } from "./modules/wishlist.js";
 import { removeFromWishlist } from "./modules/wishlist.js";
+import { initBurgerMenu } from "./modules/burger.js";
+import { initWishlistCards } from "./modules/wishlist.js";
 
 renderGames();
 initSearch();
@@ -15,6 +17,8 @@ initChatbot();
 handleProductPage();
 renderWishlist();
 removeFromWishlist();
+initBurgerMenu();
+initWishlistCards();
 
 /*support.js section*/
 const faqs = document.querySelectorAll(".faq");

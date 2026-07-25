@@ -12,6 +12,10 @@ export function renderGames(list = games, limit = 6) {
      <div class="box-image-section">
               <img class="template-img" src="
               ${game.image}" alt="" />
+              
+            <button class="game-wishlist-btn" data-id="${game.id}">
+              <i class="fa-regular fa-heart"></i>
+            </button>
               <div class="image-section_discount">
               -${game.discountPercent}%</div>
             </div>

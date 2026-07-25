@@ -1,25 +1,28 @@
 import { games } from "./games.js";
 
+function updateHeartIcon(button, icon, wishlist, gameId) {
+  if (!button || !icon) return;
+
+  if (wishlist.includes(gameId)) {
+    icon.classList.remove("fa-regular");
+    icon.classList.add("fa-solid");
+
+    button.dataset.tooltip = "Usuń z listy życzeń";
+  } else {
+    icon.classList.remove("fa-solid");
+    icon.classList.add("fa-regular");
+
+    button.dataset.tooltip = "Dodaj do listy życzeń";
+  }
+}
+
 export function initWishlist(game) {
   const wishlistBtn = document.querySelector(".btn-wishlist");
   const wishlistIcon = wishlistBtn?.querySelector("i");
 
   let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-  function updateHeartIcon() {
-    if (!wishlistIcon) return;
-
-    if (wishlist.includes(game.id)) {
-      wishlistIcon.classList.remove("fa-regular");
-      wishlistIcon.classList.add("fa-solid");
-
-      wishlistBtn.dataset.tooltip = "Usuń z listy życzeń";
-    } else {
-      wishlistIcon.classList.remove("fa-solid");
-      wishlistIcon.classList.add("fa-regular");
-      wishlistBtn.dataset.tooltip = "Dodaj do listy życzeń";
-    }
-  }
+  updateHeartIcon(wishlistBtn, wishlistIcon, wishlist, game.id);
 
   if (wishlistBtn) {
     wishlistBtn.addEventListener("click", () => {
@@ -32,7 +35,7 @@ export function initWishlist(game) {
       localStorage.setItem("wishlist", JSON.stringify(wishlist));
 
       updateWishlistCount();
-      updateHeartIcon();
+      updateHeartIcon(wishlistBtn, wishlistIcon, wishlist, game.id);
 
       console.log(wishlist);
     });
@@ -87,5 +90,38 @@ export function removeFromWishlist() {
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
 
     renderWishlist();
+  });
+}
+
+export function initWishlistCards() {
+  document.querySelectorAll(".game-wishlist-btn").forEach((btn) => {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+    const wishlistCount = document.querySelector(".wishlist-count");
+
+    if (wishlistCount) {
+      wishlistCount.textContent = wishlist.length;
+    }
+    const gameId = Number(btn.dataset.id);
+    const icon = btn.querySelector("i");
+
+    updateHeartIcon(btn, icon, wishlist, gameId);
+
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+      if (wishlist.includes(gameId)) {
+        wishlist = wishlist.filter((id) => id !== gameId);
+      } else {
+        wishlist.push(gameId);
+      }
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+      updateHeartIcon(btn, icon, wishlist, gameId);
+
+      const wishlistCount = document.querySelector(".wishlist-count");
+
+      if (wishlistCount) {
+        wishlistCount.textContent = wishlist.length;
+      }
+    });
   });
 }
