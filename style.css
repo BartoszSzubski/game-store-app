@@ -108,6 +108,30 @@ nav .home_li {
   text-decoration: none;
   color: inherit;
 }
+.nav-right_basket a {
+  position: relative;
+}
+.basket-count,
+.wishlist-count {
+  position: absolute;
+  font-size: 1rem;
+  top: -8px;
+  right: -10px;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--orange);
+  color: white;
+  font-weight: 700;
+}
+.wishlist-count {
+  top: -8px;
+  right: -18px;
+}
+
 .nav-right_basket:hover,
 .nav-right_user:hover,
 .nav-right_search:hover {
@@ -197,7 +221,21 @@ nav .home_li {
   margin: 0 auto;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   object-position: 50% 25%;
+
+  transform: scale(1);
+  animation: bannerZoom 7s ease-in-out infinite alternate;
 }
+
+@keyframes bannerZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
 .search-overlay {
   position: fixed;
   inset: 0;
@@ -310,8 +348,30 @@ nav .home_li {
   cursor: pointer;
   background: var(--surface-light);
 }
+/*banner section*/
 .banner {
   position: relative;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.carousel-btn-prev {
+  left: 1rem;
+  z-index: 10;
+}
+
+.carousel-btn-next {
+  right: 1rem;
 }
 
 main {
@@ -461,6 +521,11 @@ footer {
 
 /* tel */
 @media (max-width: 650px) {
+  .burger-btn {
+    display: block;
+    transform: translateY(-10px) !important;
+  }
+
   nav {
     align-items: center;
   }
@@ -505,29 +570,7 @@ footer {
     gap: 1rem;
     align-items: center;
   }
-
-  .banner-caption {
-    top: 14rem;
-    left: 18em;
-  }
-
-  .banner-caption_title-game {
-    font-size: 1.5rem;
-  }
-
-  .banner-caption_under-title-game {
-    font-size: 2rem;
-    margin: 1rem 0;
-  }
-
-  .banner-caption_under-title-game_discount {
-    font-size: 1rem;
-    margin: 0 1rem;
-    padding: 0.3rem 0.8rem;
-  }
 }
-
-/* banner test */
 
 /* product page */
 
@@ -930,7 +973,7 @@ h3 {
 /*basket page*/
 .basket-page-section,
 .basket-main-right {
-  margin: 5rem 0;
+  margin: 5rem auto;
 }
 .basket-page-section h1 {
   font-size: 2rem;
@@ -938,6 +981,7 @@ h3 {
 }
 .basket-page-container {
   display: flex;
+  justify-content: center;
 }
 .basket-box-empty {
   display: flex;
@@ -1045,7 +1089,53 @@ h3 {
 .back-to-shop:hover {
   color: var(--text-primary);
 }
+/*basket products*/
 
+#basket-products {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 75rem;
+  background: var(--surface-light);
+  border-radius: 1rem;
+}
+.basket-product {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 2rem;
+}
+.basket-product-image {
+  width: 100px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.basket-game-name {
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.basket-game-price {
+  font-size: 1.6rem;
+  color: var(--text-secondary);
+}
+
+.basket-game-delete {
+  margin-left: auto;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #f03131;
+  transition: 0.2s ease;
+  background: inherit;
+  border: none;
+}
+
+.basket-game-delete:hover {
+  color: #ff6b6b;
+}
 /*support page*/
 
 .support-img {
@@ -1509,6 +1599,55 @@ h3 {
 .nav-center li a {
   white-space: nowrap;
 }
+/*empty wishlsit page*/
+.wishlist-page {
+  display: flex;
+  justify-content: center;
+
+  min-height: 60vh;
+  width: 100%;
+}
+.empty-wishlist-message {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  background: var(--surface-light);
+  border-radius: 1rem;
+  max-width: 800px;
+  font-size: 1.8rem;
+}
+
+.empty-wishlist-message p,
+.empty-wishlist-message h2,
+.empty-wishlist-icon,
+.empty-wishlist-btn {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.empty-wishlist-icon {
+  font-size: 5rem;
+  color: var(--orange);
+}
+.empty-wishlist-message h2 {
+  color: var(--text-primary);
+}
+.empty-wishlist-message p {
+  color: var(--text-secondary);
+  font-size: 2rem;
+  text-align: center;
+}
+.empty-wishlist-btn {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 2.5rem;
+}
+.empty-wishlist-btn:hover {
+  color: var(--orange);
+}
 
 /* burger section */
 
@@ -1623,4 +1762,24 @@ h3 {
 .trending-title {
   white-space: nowrap;
   margin: 3rem 0;
+}
+
+/*tel basket-page*/
+
+@media (max-width: 650px) {
+  .basket-main-right {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .basket-empty-info {
+    margin: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+  .back-to-shop {
+    font-size: 1.6rem;
+  }
+  .basket-summary {
+    font-size: 1.6rem;
+  }
 }

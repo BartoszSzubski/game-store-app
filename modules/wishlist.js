@@ -52,11 +52,20 @@ export function initWishlist(game) {
 }
 export function renderWishlist() {
   const wishlistContainer = document.querySelector(".wishlist-games");
+  const emptyWishList = document.querySelector(".empty-wishlist-message");
+
   if (!wishlistContainer) return;
 
   const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
   const wishlistGames = games.filter((game) => wishlist.includes(game.id));
   wishlistContainer.innerHTML = "";
+
+  if (wishlistGames.length === 0) {
+    emptyWishList.style.display = "flex";
+    return;
+  }
+
+  emptyWishList.style.display = "none";
 
   wishlistGames.forEach((game) => {
     wishlistContainer.innerHTML += `

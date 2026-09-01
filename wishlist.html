@@ -38,7 +38,10 @@
       </ul>
       <ul class="nav-right">
         <li class="nav-right_basket">
-          <a href="basket.html"> <i class="fa-solid fa-basket-shopping"></i></a>
+          <a href="basket.html">
+            <i class="fa-solid fa-basket-shopping"></i
+            ><span class="basket-count">0</span></a
+          >
         </li>
         <li class="nav-right_user">
           <a href="login.html"> <i class="fa-regular fa-user"></i></a>
@@ -60,8 +63,24 @@
     <div class="search-results"></div>
 
     <main>
-      <div class="wishlist-games">
-        <button class="clear-wishlist">Wyczyść wishlistę</button>
+      <div class="content-container">
+        <div class="empty-wishlist-message">
+          <!--test-->
+          <div class="empty-wishlist-icon">
+            <i class="fa-solid fa-clipboard-list"></i>
+          </div>
+          <h2>Twoja lista życzeń jest pusta!</h2>
+
+          <p>
+            Czas znaleźć coś, co wpadnie Ci w oko. Przeglądaj gry, odkrywaj nowe
+            tytuły i dodawaj je do swojej listy życzeń, aby zachować je na
+            później.
+          </p>
+
+          <a href="index.html" class="empty-wishlist-btn"> Przeglądaj gry </a>
+        </div>
+        <!--test-->
+        <div class="wishlist-games"></div>
       </div>
     </main>
     <footer>

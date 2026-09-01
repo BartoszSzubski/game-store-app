@@ -8,8 +8,22 @@ import { renderWishlist } from "./modules/wishlist.js";
 import { removeFromWishlist } from "./modules/wishlist.js";
 import { initBurgerMenu } from "./modules/burger.js";
 import { initWishlistCards } from "./modules/wishlist.js";
+import { createBanner } from "./modules/banner.js";
+import {
+  initBasket,
+  renderBasket,
+  updateBasketCount,
+} from "./modules/basket.js";
+import { initTrending } from "./modules/trending.js";
+import { initFaq } from "./modules/faq.js";
 
-renderGames();
+if (!document.getElementById("trending-page")) {
+  renderGames();
+}
+if (document.getElementById("trending-page")) {
+  initTrending();
+}
+initFaq();
 initSearch();
 createTooltip();
 initNavigation();
@@ -19,17 +33,9 @@ renderWishlist();
 removeFromWishlist();
 initBurgerMenu();
 initWishlistCards();
-
-/*support.js section*/
-const faqs = document.querySelectorAll(".faq");
-
-faqs.forEach((faq) => {
-  faq.addEventListener("click", () => {
-    faq.classList.toggle("active");
-  });
-});
-
-//trending games// //test//
-//const trendingGames = games.filter((game) => game.trending);
-
-//renderGames(trendingGames);
+createBanner();
+initBasket();
+if (document.getElementById("basket-products")) {
+  renderBasket();
+}
+updateBasketCount();

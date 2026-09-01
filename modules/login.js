@@ -9,18 +9,18 @@ export function handleTogglePasswordVisibility() {
     if (!eyeOpen) return;
     if (!eyeClose) return;
 
-    eyeOpen.classList.add("eye-icon--hidden");
+    eyeClose.classList.add("eye-icon--hidden");
 
     // Hide password
     eyeOpen.addEventListener("click", () => {
-      input.type = "password";
-      eyeClose.classList.remove("eye-icon--hidden");
-      eyeOpen.classList.add("eye-icon--hidden");
+      input.type = "text";
+      eyeClose.classList.add("eye-icon--hidden");
+      eyeOpen.classList.remove("eye-icon--hidden");
     });
 
     // Show password
     eyeClose.addEventListener("click", () => {
-      input.type = "text";
+      input.type = "password";
       eyeClose.classList.add("eye-icon--hidden");
       eyeOpen.classList.remove("eye-icon--hidden");
     });

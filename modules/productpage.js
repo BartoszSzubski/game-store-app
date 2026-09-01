@@ -1,5 +1,6 @@
 import { games } from "./games.js";
 import { initWishlist } from "./wishlist.js";
+import { initBasket } from "./basket.js";
 
 export function handleProductPage() {
   const productPage = document.querySelector(".product-page");
@@ -89,4 +90,5 @@ export function handleProductPage() {
 
   //wishlist
   initWishlist(game);
+  initBasket(game);
 }
