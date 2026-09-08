@@ -1,4 +1,5 @@
 import { games } from "./games.js";
+import { addToCart } from "./basket.js";
 
 function updateHeartIcon(button, icon, wishlist, gameId) {
   if (!button || !icon) return;
@@ -76,12 +77,26 @@ export function renderWishlist() {
           <h2>${game.name}</h2>
           <p>${game.price.toFixed(2)} zł</p>
         </div>
+              <button class="add-to-cart-wishlist" data-id="${game.id}" title="Dodaj do koszyka">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </button>
 
-        <button class="remove-from-wishlist" data-id="${game.id}">
+        <button class="remove-from-wishlist" data-id="${game.id}" title="Usuń z listy życzeń">
           <i class="fa-solid fa-trash"></i>
         </button>
       </div>
     `;
+  });
+
+  document.querySelectorAll(".add-to-cart-wishlist").forEach((button) => {
+    button.addEventListener("click", () => {
+      const gameId = Number(button.dataset.id);
+      addToCart(gameId);
+
+      button.innerHTML = `
+      <i class="fa-solid fa-check"></i>
+    `;
+    });
   });
 }
 

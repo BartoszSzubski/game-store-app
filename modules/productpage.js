@@ -88,6 +88,24 @@ export function handleProductPage() {
     cartButton.title = `Dodaj do koszyka: ${game.name}`;
   }
 
+  const priceFinal = document.querySelector(".product-panel-price-final");
+
+  if (priceFinal) {
+    priceFinal.textContent = `${game.price}zł`;
+  }
+
+  const priceDiscount = document.querySelector(".product-panel-price-discount");
+
+  if (priceDiscount) {
+    priceDiscount.textContent = `-${game.discountPercent}%`;
+  }
+
+  const priceOriginal = document.querySelector(".product-panel-price-original");
+
+  if (priceOriginal) {
+    priceOriginal.textContent = `${game.priceOriginal} zł`;
+  }
+
   //wishlist
   initWishlist(game);
   initBasket(game);

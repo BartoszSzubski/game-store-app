@@ -3,12 +3,12 @@ export const games = [
     id: 0,
     name: "Warzone Frontlines",
     description: `A fast-paced modern FPS focused on intense tactical combat and large-scale military operations. 
-  Take part in explosive battles across realistic environments, where teamwork, strategy and quick decisions determine victory. 
-  Customize your weapons, master different combat roles and experience dynamic firefights inspired by modern warfare.`,
+Take part in explosive battles across realistic environments, where teamwork, strategy and quick decisions determine victory. 
+Customize your weapons, master different combat roles and experience dynamic firefights inspired by modern warfare.`,
     genres: ["action"],
     tags: ["fps", "multiplayer"],
     image: "images/frontlines.png",
-    price: 272.6,
+    price: 204.99,
     discount: true,
     discountPercent: 27,
     platforms: ["PC", "PS5", "Xbox Series X|S"],
@@ -19,17 +19,18 @@ export const games = [
     background: "images/frontlines_bg.png",
     publisher: "IronPeak Interactive",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT"],
+    priceOriginal: 280.81,
   },
   {
     id: 1,
     name: "Ashen Valor",
     description: `A dark fantasy RPG set in a broken world consumed by war, ancient magic and forgotten legends. 
-  Explore dangerous lands filled with mysterious ruins, powerful enemies and characters whose stories change depending on your choices. 
-  Build your own playstyle, discover hidden secrets and decide the fate of a kingdom struggling to survive.`,
+Explore dangerous lands filled with mysterious ruins, powerful enemies and characters whose stories change depending on your choices. 
+Build your own playstyle, discover hidden secrets and decide the fate of a kingdom struggling to survive.`,
     genres: ["rpg"],
     tags: ["fantasy", "open-world"],
     image: "images/ashenvalor.png",
-    price: 373.33,
+    price: 149.99,
     discount: true,
     discountPercent: 40,
     platforms: ["PC"],
@@ -40,17 +41,18 @@ export const games = [
     background: "images/ashenvalor_bg.png",
     publisher: "Infinite Realm Entertainment",
     languages: ["PL", "EN", "DE", "FR"],
+    priceOriginal: 249.99,
   },
   {
     id: 2,
     name: "Ultimate Soccer",
     description: `A realistic football simulation delivering fast matches, competitive gameplay and authentic stadium experiences. 
-  Create your dream team, master advanced tactics and compete against players from around the world. 
-  With improved physics, detailed animations and multiple game modes, every match feels unpredictable and exciting.`,
+Create your dream team, master advanced tactics and compete against players from around the world. 
+With improved physics, detailed animations and multiple game modes, every match feels unpredictable and exciting.`,
     genres: ["sports"],
     tags: ["football", "multiplayer"],
     image: "images/ultimate.png",
-    price: 263.64,
+    price: 89.99,
     discount: true,
     discountPercent: 67,
     platforms: ["PC", "PS5", "Xbox Series X|S"],
@@ -61,6 +63,7 @@ export const games = [
     background: "images/ultimate_bg.png",
     publisher: "Apex Interactive",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT", "PT-BR"],
+    priceOriginal: 272.7,
   },
   {
     id: 3,
@@ -71,7 +74,7 @@ export const games = [
     genres: ["action"],
     tags: ["stealth", "fantasy"],
     image: "images/shadows.png",
-    price: 240,
+    price: 24.99,
     discount: true,
     discountPercent: 90,
     platforms: ["PC", "PS5"],
@@ -82,6 +85,7 @@ export const games = [
     background: "images/shadows_bg.png",
     publisher: "ShadowWorks Studio",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT", "PT-BR"],
+    priceOriginal: 249.99,
   },
   {
     id: 4,
@@ -103,6 +107,7 @@ export const games = [
     background: "images/infected_bg.png",
     publisher: "Crimson Pixel",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT", "PT-BR"],
+    priceOriginal: 423.66,
   },
   {
     id: 5,
@@ -124,6 +129,7 @@ export const games = [
     background: "images/veridan_bg.png",
     publisher: "Quantum Forge",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT", "PT-BR"],
+    priceOriginal: 926.26,
   },
   {
     id: 6,
@@ -145,6 +151,7 @@ export const games = [
     background: "images/ruins_avaris_bg.png",
     publisher: "Atlas Interactive",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT", "PT-BR"],
+    priceOriginal: 285.7,
   },
   {
     id: 7,
@@ -166,6 +173,7 @@ export const games = [
     background: "images/nightfall_protocol_bg.png",
     publisher: "Black Falcon Entertainment",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT", "PT-BR"],
+    priceOriginal: 239.99,
   },
   {
     id: 8,
@@ -187,6 +195,7 @@ export const games = [
     background: "images/gunsmoke_legends_bg.png",
     publisher: "WildRiver Games",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT"],
+    priceOriginal: 149.99,
   },
   {
     id: 9,
@@ -208,6 +217,7 @@ export const games = [
     background: "images/iron_frontline_bg.png",
     publisher: "Steel Horizon Games",
     languages: ["PL", "EN"],
+    priceOriginal: 216.65,
   },
   {
     id: 10,
@@ -229,6 +239,7 @@ export const games = [
     background: "images/kingdoms_dawn_bg.png",
     publisher: "Atlas Interactive",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT", "PT-BR"],
+    priceOriginal: 99.99,
   },
   {
     id: 11,
@@ -251,6 +262,7 @@ export const games = [
     background: "images/nano_warzone_bg.png",
     publisher: "Neon Forge",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT", "PT-BR"],
+    priceOriginal: 338.45,
   },
   {
     id: 12,
@@ -273,6 +285,7 @@ export const games = [
     background: "images/hollow_eclipse_bg.png",
     publisher: "Quantum Forge",
     languages: ["PL", "EN"],
+    priceOriginal: 379.98,
   },
   {
     id: 13,
@@ -294,6 +307,7 @@ export const games = [
     background: "images/arcane_academy_bg.png",
     publisher: "Aurora Interactive",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT", "PT-BR"],
+    priceOriginal: 312.49,
   },
   {
     id: 14,
@@ -315,6 +329,7 @@ export const games = [
     background: "images/outlaws_requiem_bg.png",
     publisher: "WildRiver Games",
     languages: ["PL", "EN"],
+    priceOriginal: 279.99,
   },
   {
     id: 15,
@@ -337,6 +352,7 @@ export const games = [
     background: "images/crash_circuit_x_bg.png",
     publisher: "Fireline Entertainment",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT", "PT-BR"],
+    priceOriginal: 224.98,
   },
   {
     id: 16,
@@ -358,6 +374,7 @@ export const games = [
     background: "images/neon_vice_syndicate_bg.png",
     publisher: "Neon Forge",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT", "PT-BR"],
+    priceOriginal: 299.99,
   },
   {
     id: 17,
@@ -380,6 +397,7 @@ export const games = [
     background: "images/midnight_drift_union_bg.png",
     publisher: "Fireline Entertainment",
     languages: ["PL", "EN"],
+    priceOriginal: 218.16,
   },
   {
     id: 18,
@@ -400,17 +418,18 @@ export const games = [
     releaseDate: "2 listopada 2025",
     publisher: "Black Falcon Entertainment",
     languages: ["PL", "EN", "DE", "FR"],
+    priceOriginal: 228.56,
   },
   {
     id: 19,
     name: "Velocity Grand Prix 26",
     description: `A realistic Formula racing simulator delivering intense competition, advanced physics and authentic motorsport experiences. 
-    Compete on legendary tracks, manage your career and adapt to changing weather conditions during every race. 
-    Customize your vehicle, improve your driving skills and fight for championship glory against the fastest drivers in the world.`,
+  Compete on legendary tracks, manage your career and adapt to changing weather conditions during every race. 
+  Customize your vehicle, improve your driving skills and fight for championship glory against the fastest drivers in the world.`,
     genres: ["sports", "racing"],
     tags: ["f1", "simulation", "multiplayer"],
     image: "images/velocitygp26.png",
-    price: 319.99,
+    price: 174.99,
     discount: true,
     discountPercent: 30,
     platforms: ["PC", "PS5", "Xbox Series X|S"],
@@ -420,17 +439,18 @@ export const games = [
     releaseDate: "12 grudnia 2025",
     publisher: "Apex Interactive",
     languages: ["PL", "EN", "DE"],
+    priceOriginal: 249.99,
   },
   {
     id: 20,
     name: "Court Kings 26",
     description: `A next-generation basketball experience combining realistic gameplay, competitive matches and a deep career mode. 
-    Create your own player, compete on street courts and professional arenas while developing your skills. 
-    Join online leagues, challenge other players and become a legend of the basketball world.`,
+  Create your own player, compete on street courts and professional arenas while developing your skills. 
+  Join online leagues, challenge other players and become a legend of the basketball world.`,
     genres: ["sports"],
     tags: ["basketball", "nba", "multiplayer"],
     image: "images/courtkings26.png",
-    price: 299.99,
+    price: 179.99,
     discount: true,
     discountPercent: 22,
     trending: true,
@@ -441,17 +461,18 @@ export const games = [
     releaseDate: "20 listopada 2026",
     publisher: "Apex Interactive",
     languages: ["PL", "EN", "DE", "FR", "ES", "IT"],
+    priceOriginal: 229.99,
   },
   {
     id: 21,
     name: "Neon Rift: Eclipse Protocol",
-    description: `A dark sci-fi RPG set in a neon-drenched megacity where corporations, factions and advanced technology control the future of humanity. 
-    Play as a cyber-enhanced mercenary, upgrade your abilities with powerful implants and make decisions that influence the world around you. 
-    Explore a massive futuristic city, uncover hidden conspiracies and shape your own story through choices with lasting consequences.`,
+    description: `A dark sci-fi RPG set in a neon-drenched megacity where corporations, factions and advanced technology control the future of humanity.  
+  Play as a cyber-enhanced mercenary, upgrade your abilities with powerful implants and make decisions that influence the world around you.  
+  Explore a massive futuristic city, uncover hidden conspiracies and shape your own story through choices with lasting consequences.`,
     genres: ["rpg"],
     tags: ["cyberpunk", "open-world", "sci-fi"],
     image: "images/neonrift.png",
-    price: 349.99,
+    price: 174.99,
     discount: true,
     discountPercent: 35,
     platforms: ["PC", "PS5", "Xbox Series X|S"],
@@ -462,17 +483,18 @@ export const games = [
     background: "images/neonrift_bg.png",
     publisher: "Neon Forge",
     languages: ["PL", "EN", "DE", "FR", "JA"],
+    priceOriginal: 269.99,
   },
   {
     id: 22,
     name: "Starlight Odyssey: Genesis War",
-    description: `A massive space opera RPG where you command a starship crew and explore the unknown corners of the galaxy. 
-    Discover alien civilizations, form alliances and face conflicts that can change the future of entire worlds. 
-    Customize your ship, manage your crew and make difficult decisions that determine the fate of countless civilizations.`,
+    description: `A massive space opera RPG where you command a starship crew and explore the unknown corners of the galaxy.  
+  Discover alien civilizations, form alliances and face conflicts that can change the future of entire worlds.  
+  Customize your ship, manage your crew and make difficult decisions that determine the fate of countless civilizations.`,
     genres: ["rpg"],
     tags: ["sci-fi", "space", "story-driven"],
     image: "images/starlightodyssey.png",
-    price: 329.99,
+    price: 164.99,
     discount: true,
     discountPercent: 28,
     trending: true,
@@ -483,6 +505,7 @@ export const games = [
     releaseDate: "2 marca 2027",
     publisher: "Infinite Realm Entertainment",
     languages: ["PL", "EN", "DE", "FR", "JA"],
+    priceOriginal: 229.99,
   },
   {
     id: 23,
@@ -503,5 +526,6 @@ export const games = [
     releaseDate: "9 listopada 2027",
     publisher: "Steel Horizon Games",
     languages: ["PL", "EN", "DE", "FR"],
+    priceOriginal: 399.99,
   },
 ];

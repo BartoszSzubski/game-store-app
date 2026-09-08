@@ -506,6 +506,17 @@ footer {
     font-size: 3rem;
     display: flex;
   }
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .section-right_up {
+    font-size: 2rem;
+  }
+
+  .section-right_bottom {
+    font-size: 1.6rem;
+  }
 }
 /*logo*/
 @media (max-width: 1400px) {
@@ -569,6 +580,13 @@ footer {
     display: flex;
     gap: 1rem;
     align-items: center;
+  }
+  .section-right_up {
+    font-size: 1.2rem;
+  }
+
+  .section-right_bottom {
+    font-size: 1rem;
   }
 }
 
@@ -765,6 +783,7 @@ h3 {
 .info-row {
   padding: 0.3rem;
 }
+
 /* product page media - tel*/
 
 @media (max-width: 1200px) {
@@ -1591,9 +1610,41 @@ h3 {
   flex: 1;
 }
 
-.remove-from-wishlist {
-  font-size: 3rem;
+.remove-from-wishlist,
+.add-to-cart-wishlist {
+  display: flex;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
   cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+.add-to-cart-wishlist {
+  background: var(--orange);
+  color: var(--text-primary);
+}
+
+.add-to-cart-wishlist:hover {
+  background: #ff9d2e;
+  transform: scale(1.08);
+}
+
+.remove-from-wishlist {
+  background: #333;
+  color: var(--text-secondary);
+}
+
+.remove-from-wishlist:hover {
+  background: #e53935;
+  color: var(--text-primary);
+  transform: scale(1.08);
 }
 
 .nav-center li a {
@@ -1768,7 +1819,7 @@ h3 {
 
 @media (max-width: 650px) {
   .basket-main-right {
-    min-width: 0;
+    min-width: 20rem;
     width: 100%;
   }
 
@@ -1783,3 +1834,36 @@ h3 {
     font-size: 1.6rem;
   }
 }
+
+/*tel support page */
+@media (max-width: 650px) {
+  .support-caption_title {
+    font-size: 2.8rem;
+  }
+  .support-caption_description {
+    font-size: 1.6rem;
+  }
+  .faq-title {
+    font-size: 2.8rem;
+  }
+  .faq-question {
+    font-size: 2.2rem;
+  }
+  .faq-answer {
+    font-size: 1.8rem;
+  }
+}
+
+/* wishlist tel*/
+@media (max-width: 650px) {
+  .empty-wishlist-message h2 {
+    font-size: 2rem;
+  }
+  .empty-wishlist-message p {
+    font-size: 1.6rem;
+  }
+  .empty-basket-btn {
+    font-size: 1.8rem;
+  }
+}
+/*test*/
